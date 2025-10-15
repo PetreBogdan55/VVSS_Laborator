@@ -1,5 +1,7 @@
 #include "User.h"
+#include "Environment.h"
 #include <iostream>
+#include <print>
 #include <vector>
 
 int main()
@@ -17,6 +19,12 @@ int main()
 	// Apel clase
 	User user("Ion", "Popescu", "ion.popescu@gmail.com", "Str. Lunga, nr 67A, Brasov, Romania", "0712345678");
 	user.PrintInformation();
+
+	std::cout << Environment::getInstance()->getValue("MY_API_KEY");
+
+	std::ofstream file("log.txt");
+	file << "Mesaj\n";
+	std::println(file, "Suma lui {} si a lui {} este {}", a, b, a + b);
 
 	return 0;
 }

@@ -103,7 +103,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>EntityLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,10 +126,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EntityLayer\User.cpp" />
+    <ClCompile Include="IntegrationLayer\Environment\Environment.cpp" />
+    <ClCompile Include="IntegrationLayer\Logger\Logger.cpp" />
+    <ClCompile Include="IntegrationLayer\Logger\LoggerSingleton.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EntityLayer\User.h" />
+    <ClInclude Include="IntegrationLayer\Environment\Environment.h" />
+    <ClInclude Include="IntegrationLayer\Logger\Logger.h" />
+    <ClInclude Include="IntegrationLayer\Logger\LoggerSingleton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".env" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

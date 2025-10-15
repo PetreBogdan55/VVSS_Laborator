@@ -33,7 +33,7 @@ public:
 public:
 	virtual void PrintInformation() const;
 
-private:
+protected:
 	int m_id;
 	std::string m_firstName;
 	std::string m_lastName;

@@ -1,0 +1,2 @@
+Mesaj
+Suma lui 5 si a lui 7 este 12
