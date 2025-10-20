@@ -15,23 +15,23 @@ public:
 	virtual ~User() = default;
 
 public:
-	int GetID() const;
-	std::string GetFirstName() const;
-	std::string GetLastName() const;
-	std::string GetEmail() const;
-	std::string GetAddress() const;
-	std::string GetPhone() const;
+	int getID() const;
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getEmail() const;
+	std::string getAddress() const;
+	std::string getPhone() const;
 
 public:
-	void SetID(int id);
-	void SetFirstName(const std::string& firstName);
-	void SetLastName(const std::string& lastName);
-	void SetEmail(const std::string& email);
-	void SetAddress(const std::string& address);
-	void SetPhone(const std::string& phone);
+	void setID(int id);
+	void setFirstName(const std::string& firstName);
+	void setLastName(const std::string& lastName);
+	void setEmail(const std::string& email);
+	void setAddress(const std::string& address);
+	void setPhone(const std::string& phone);
 
 public:
-	virtual void PrintInformation() const;
+	virtual void printInformation() const;
 
 protected:
 	int m_id;

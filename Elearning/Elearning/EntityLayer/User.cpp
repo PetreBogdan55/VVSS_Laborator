@@ -45,67 +45,73 @@ User& User::operator=(User&& other) noexcept
     return *this;
 }
 
-int User::GetID() const
+int User::getID() const
 {
     return m_id;
 }
 
-std::string User::GetFirstName() const
+std::string User::getFirstName() const
 {
     return m_firstName;
 }
 
-std::string User::GetLastName() const
+std::string User::getLastName() const
 {
     return m_lastName;
 }
 
-std::string User::GetEmail() const
+std::string User::getEmail() const
 {
     return m_email;
 }
 
-std::string User::GetAddress() const
+std::string User::getAddress() const
 {
     return m_address;
 }
 
-std::string User::GetPhone() const
+std::string User::getPhone() const
 {
     return m_phone;
 }
 
-void User::SetID(int id)
+void User::setID(int id)
 {
     m_id = id;
 }
 
-void User::SetFirstName(const std::string& firstName)
+void User::setFirstName(const std::string& firstName)
 {
     m_firstName = firstName;
 }
 
-void User::SetLastName(const std::string& lastName)
+void User::setLastName(const std::string& lastName)
 {
     m_lastName = lastName;
 }
 
-void User::SetEmail(const std::string& email)
+void User::setEmail(const std::string& email)
 {
     m_email = email;
 }
 
-void User::SetAddress(const std::string& address)
+void User::setAddress(const std::string& address)
 {
     m_address = address;
 }
 
-void User::SetPhone(const std::string& phone)
+void User::setPhone(const std::string& phone)
 {
     m_phone = phone;
 }
 
-void User::PrintInformation() const
+void User::printInformation() const
 {
-    std::println("User: {}, {}, {}, {}, {}, {}", m_firstName, m_lastName, m_email, m_address, m_phone, m_id);
+    std::println("User: {}, {}, {}, {}, {}, {}", 
+        m_firstName, 
+        m_lastName, 
+        m_email, 
+        m_address, 
+        m_phone, 
+        m_id);
 }

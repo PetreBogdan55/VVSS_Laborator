@@ -125,17 +125,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EntityLayer\Teacher.cpp" />
     <ClCompile Include="EntityLayer\User.cpp" />
     <ClCompile Include="IntegrationLayer\Environment\Environment.cpp" />
     <ClCompile Include="IntegrationLayer\Logger\Logger.cpp" />
     <ClCompile Include="IntegrationLayer\Logger\LoggerSingleton.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="EntityLayer\Student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EntityLayer\Teacher.h" />
     <ClInclude Include="EntityLayer\User.h" />
     <ClInclude Include="IntegrationLayer\Environment\Environment.h" />
     <ClInclude Include="IntegrationLayer\Logger\Logger.h" />
     <ClInclude Include="IntegrationLayer\Logger\LoggerSingleton.h" />
+    <ClInclude Include="EntityLayer\Student.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />

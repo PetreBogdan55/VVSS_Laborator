@@ -1,2 +1,4 @@
-[WARNING] [2025-10-20 15:00:19] Mesaj
-[ERROR]   [2025-10-20 15:00:19] Mesaj
+[WARNING] [2025-10-20 15:35:34] Mesaj
+[ERROR]   [2025-10-20 15:35:34] Mesaj
+[ERROR]   [2025-10-20 15:35:34] Attempted to set invalid study year (<=0).
+[ERROR]   [2025-10-20 15:35:34] Attempted to set empty academic title.
