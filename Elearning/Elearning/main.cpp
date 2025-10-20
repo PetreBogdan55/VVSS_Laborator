@@ -1,30 +1,21 @@
 #include "User.h"
 #include "Environment.h"
+#include "LoggerSingleton.h"
+#include <vector>
 #include <iostream>
 #include <print>
-#include <vector>
 
 int main()
 {
-	// Afisare c++ cu mesaje: Suma lui a si a lui b este a+b
-	int a = 5;
-	int b = 7;
-	std::cout << "Suma lui " << a << " si a lui " << b << " este " << a + b << std::endl;
-
-	// Doar pentru C++ 23 - Martie 2025
-	std::println("Suma lui {} si a lui {} este {}",	a, b, a + b);
-	std::vector<int> vector = { 1,2,3,8,10 };
-	std::println("Vector: {::04x}", vector);
-
 	// Apel clase
 	User user("Ion", "Popescu", "ion.popescu@gmail.com", "Str. Lunga, nr 67A, Brasov, Romania", "0712345678");
 	user.PrintInformation();
 
 	std::cout << Environment::getInstance()->getValue("MY_API_KEY");
 
-	std::ofstream file("log.txt");
-	file << "Mesaj\n";
-	std::println(file, "Suma lui {} si a lui {} este {}", a, b, a + b);
+	LoggerSingleton::getLoggerInstance()->log("Mesaj", Logger::Level::Info);
+	LoggerSingleton::getLoggerInstance()->log("Mesaj", Logger::Level::Warning);
+	LoggerSingleton::getLoggerInstance()->log("Mesaj", Logger::Level::Error);
 
 	return 0;
 }

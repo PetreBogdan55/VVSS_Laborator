@@ -1,2 +1,2 @@
-Mesaj
-Suma lui 5 si a lui 7 este 12
+[WARNING] [2025-10-20 15:00:19] Mesaj
+[ERROR]   [2025-10-20 15:00:19] Mesaj
