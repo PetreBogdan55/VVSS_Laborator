@@ -1,14 +1,16 @@
-#include "Database.h"
 #include "Environment.h"
 #include "LoggerSingleton.h"
-#include "Student.h"
+#include "StudentRepository.h"
 #include "Teacher.h"
-#include <vector>
 
 int main()
 {
 	Database database("MSSQLSERVER_CONN_STRING");
-	std::println("Status BD: {}", database.getIsConnected());
+	StudentRepository studentRepository(database);
+	const auto students = studentRepository.getAllStudents();
+	if (students != std::nullopt)
+		for (const auto& student : students.value())
+			student.printInformation();
 
 	return 0;
 }

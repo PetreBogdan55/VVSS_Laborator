@@ -133,6 +133,7 @@
     <ClCompile Include="IntegrationLayer\Logger\LoggerSingleton.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="EntityLayer\Student.cpp" />
+    <ClCompile Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntegrationLayer\Database\Database.h" />
@@ -142,6 +143,8 @@
     <ClInclude Include="IntegrationLayer\Logger\Logger.h" />
     <ClInclude Include="IntegrationLayer\Logger\LoggerSingleton.h" />
     <ClInclude Include="EntityLayer\Student.h" />
+    <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\IStudentRepository.h" />
+    <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />
