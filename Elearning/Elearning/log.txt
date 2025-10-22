@@ -1,4 +1,4 @@
-[INFO]    [2025-10-22 11:36:08] Attempting connection to SQL Server...
-[INFO]    [2025-10-22 11:36:08] Successfully connected to SQL Server
+[INFO]    [2025-10-22 11:45:48] Attempting connection to SQL Server...
+[INFO]    [2025-10-22 11:45:48] Successfully connected to SQL Server
 
-[INFO]    [2025-10-22 11:36:08] Disconnected from database!
+[INFO]    [2025-10-22 11:45:48] Disconnected from database!

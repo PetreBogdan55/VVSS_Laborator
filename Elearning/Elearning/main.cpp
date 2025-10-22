@@ -12,5 +12,9 @@ int main()
 		for (const auto& student : students.value())
 			student.printInformation();
 
+	const auto student = studentRepository.getStudentById(2);
+	if (student != std::nullopt)
+		student.value().printInformation();
+
 	return 0;
 }
