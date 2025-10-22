@@ -103,7 +103,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>RepositoryLayer/StudentRepositoryLayer;IntegrationLayer/Database;IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IntegrationLayer\Database\Database.cpp" />
     <ClCompile Include="EntityLayer\Teacher.cpp" />
     <ClCompile Include="EntityLayer\User.cpp" />
     <ClCompile Include="IntegrationLayer\Environment\Environment.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="EntityLayer\Student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IntegrationLayer\Database\Database.h" />
     <ClInclude Include="EntityLayer\Teacher.h" />
     <ClInclude Include="EntityLayer\User.h" />
     <ClInclude Include="IntegrationLayer\Environment\Environment.h" />

@@ -14,16 +14,15 @@ Environment* Environment::getInstance()
 std::string Environment::getValue(const std::string& key) const
 {
     std::ifstream file(".env");
-    if (!file.is_open()) return "Fisierul nu exista";
+    if (!file.is_open()) return "";
     
     std::string line;
     while (std::getline(file, line))
     {
-        // TODO: trim la spatii
         if (line.empty()) continue;
         if (line[0] == '#') continue;
         if (line.rfind(key + "=", 0) == 0)
             return line.substr(key.size() + 1);
     }
-    return "Nu exista aceasta cheie";
+    return "";
 }

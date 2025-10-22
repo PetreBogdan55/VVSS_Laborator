@@ -1,4 +1,4 @@
-[WARNING] [2025-10-20 15:35:34] Mesaj
-[ERROR]   [2025-10-20 15:35:34] Mesaj
-[ERROR]   [2025-10-20 15:35:34] Attempted to set invalid study year (<=0).
-[ERROR]   [2025-10-20 15:35:34] Attempted to set empty academic title.
+[INFO]    [2025-10-22 10:37:48] Attempting connection to SQL Server...
+[INFO]    [2025-10-22 10:37:48] Successfully connected to SQL Server
+
+[INFO]    [2025-10-22 10:37:48] Disconnected from database!

@@ -36,6 +36,9 @@
     <ClCompile Include="EntityLayer\Teacher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IntegrationLayer\Database\Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EntityLayer\User.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EntityLayer\Teacher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrationLayer\Database\Database.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
