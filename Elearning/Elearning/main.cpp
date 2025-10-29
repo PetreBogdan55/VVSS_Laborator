@@ -7,6 +7,13 @@ int main()
 {
 	Database database("MSSQLSERVER_CONN_STRING");
 	StudentRepository studentRepository(database);
+
+	Student studentNou("Ion", "Vasile", "ion@yahoo.com", "Str.Brazilor 17",
+		"0777123412", "GTEYE", 2, 1);
+	studentRepository.updateStudent(studentNou);
+
+	//studentRepository.deleteStudent(2005);
+
 	const auto students = studentRepository.getAllStudents();
 	if (students != std::nullopt)
 		for (const auto& student : students.value())

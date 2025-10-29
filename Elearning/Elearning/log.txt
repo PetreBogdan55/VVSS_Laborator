@@ -1,4 +1,6 @@
-[INFO]    [2025-10-22 11:45:48] Attempting connection to SQL Server...
-[INFO]    [2025-10-22 11:45:48] Successfully connected to SQL Server
+[INFO]    [2025-10-29 10:39:16] Attempting connection to SQL Server...
+[INFO]    [2025-10-29 10:39:16] Successfully connected to SQL Server
 
-[INFO]    [2025-10-22 11:45:48] Disconnected from database!
+[INFO]    [2025-10-29 10:39:16] Updated entity
+[WARNING] [2025-10-29 10:39:16] No students has been found
+[INFO]    [2025-10-29 10:39:16] Disconnected from database!
