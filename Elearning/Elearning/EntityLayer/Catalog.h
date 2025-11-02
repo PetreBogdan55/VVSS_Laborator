@@ -20,6 +20,7 @@ public:
     void addGrade(const Student& student, const Course& course, double grade);
     void updateGrade(const Student& student, const Course& course, double grade);
     double getGrade(const Student& student, const Course& course) const;
+    std::vector<double> getAllGrades(const Student& student) const;
     void printAllGrades() const;
 
 private:

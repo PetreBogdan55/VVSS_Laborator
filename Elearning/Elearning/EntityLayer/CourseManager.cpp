@@ -86,3 +86,15 @@ void CourseManager::printStudentsFromCourse(int courseId) const {
     }
 }
 
+bool CourseManager::isValidCourse(const Course& course) const {
+    return course.getId() > 0 && !course.getTitle().empty();
+}
+
+bool CourseManager::isValidTeacher(const Teacher& teacher) const {
+    return teacher.getID() > 0 && !teacher.getFirstName().empty();
+}
+
+bool CourseManager::isValidStudent(const Student& student) const {
+    return student.getID() > 0 && !student.getFirstName().empty();
+}
+

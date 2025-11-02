@@ -86,6 +86,16 @@ double Catalog::getGrade(const Student& student, const Course& course) const {
     return it->second;
 }
 
+std::vector<double> Catalog::getAllGrades(const Student& student) const
+{
+    std::vector<double> grades;
+    for (const auto& [key, grade] : m_grades) {
+        if (key.studentId == student.getID())
+            grades.push_back(grade);
+    }
+    return grades;
+}
+
 void Catalog::printAllGrades() const {
     for (const auto& [key, grade] : m_grades) {
         std::println("Student ID: {} | Course ID: {}, Grade: {}", key.studentId, key.courseId, grade);
