@@ -125,6 +125,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EntityLayer\Catalog.cpp" />
+    <ClCompile Include="EntityLayer\CourseManager.cpp" />
+    <ClCompile Include="EntityLayer\Course.cpp" />
     <ClCompile Include="IntegrationLayer\Database\Database.cpp" />
     <ClCompile Include="EntityLayer\Teacher.cpp" />
     <ClCompile Include="EntityLayer\User.cpp" />
@@ -136,6 +139,9 @@
     <ClCompile Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EntityLayer\Catalog.h" />
+    <ClInclude Include="EntityLayer\CourseManager.h" />
+    <ClInclude Include="EntityLayer\Course.h" />
     <ClInclude Include="IntegrationLayer\Database\Database.h" />
     <ClInclude Include="EntityLayer\Teacher.h" />
     <ClInclude Include="EntityLayer\User.h" />
