@@ -103,7 +103,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>RepositoryLayer/StudentRepositoryLayer;IntegrationLayer/Database;IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ServiceLayer;DomainLayer;Utils;RepositoryLayer/StudentRepositoryLayer;IntegrationLayer/Database;IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +137,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="EntityLayer\Student.cpp" />
     <ClCompile Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.cpp" />
+    <ClCompile Include="DomainLayer\StudentDomain.cpp" />
+    <ClCompile Include="ServiceLayer\StudentService.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EntityLayer\Catalog.h" />
@@ -151,6 +154,9 @@
     <ClInclude Include="EntityLayer\Student.h" />
     <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\IStudentRepository.h" />
     <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.h" />
+    <ClInclude Include="DomainLayer\StudentDomain.h" />
+    <ClInclude Include="ServiceLayer\StudentService.h" />
+    <ClInclude Include="Utils\Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />
