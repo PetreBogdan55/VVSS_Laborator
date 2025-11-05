@@ -1,6 +1,8 @@
-[INFO]    [2025-11-05 10:01:00] Attempting connection to SQL Server...
-[INFO]    [2025-11-05 10:01:00] Successfully connected to SQL Server
+[INFO]    [2025-11-05 10:32:59] Attempting connection to SQL Server...
+[INFO]    [2025-11-05 10:32:59] Successfully connected to SQL Server
 
-[INFO]    [2025-11-05 10:01:00] Updated entity
-[WARNING] [2025-11-05 10:01:00] No students has been found
-[INFO]    [2025-11-05 10:01:00] Disconnected from database!
+[INFO]    [2025-11-05 10:32:59] Added grade 6.000000 for student Vasile in course DAM.
+[INFO]    [2025-11-05 10:32:59] Added grade 8.000000 for student Vasile in course TW.
+[INFO]    [2025-11-05 10:32:59] Added grade 5.000000 for student Vasile in course PID.
+[INFO]    [2025-11-05 10:32:59] Added grade 10.000000 for student Vasile in course VVSS.
+[INFO]    [2025-11-05 10:32:59] Disconnected from database!

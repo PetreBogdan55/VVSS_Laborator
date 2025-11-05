@@ -1,27 +1,29 @@
 #include "Environment.h"
 #include "LoggerSingleton.h"
-#include "StudentRepository.h"
-#include "Teacher.h"
+#include "StudentService.h"
+#include "Course.h"
 
 int main()
 {
 	Database database("MSSQLSERVER_CONN_STRING");
 	StudentRepository studentRepository(database);
+	Student student = studentRepository.getStudentById(1).value();
 
-	Student studentNou("Ion", "Vasile", "ion@yahoo.com", "Str.Brazilor 17",
-		"0777123412", "GTEYE", 2, 1);
-	studentRepository.updateStudent(studentNou);
+	Course curs1(1, "DAM", "");
+	Course curs2(2, "TW", "");
+	Course curs3(3, "PID", "");
+	Course curs4(4, "VVSS", "");
 
-	//studentRepository.deleteStudent(2005);
-
-	const auto students = studentRepository.getAllStudents();
-	if (students != std::nullopt)
-		for (const auto& student : students.value())
-			student.printInformation();
-
-	const auto student = studentRepository.getStudentById(2);
-	if (student != std::nullopt)
-		student.value().printInformation();
+	Catalog catalog;
+	catalog.addGrade(student, curs1, 6);
+	catalog.addGrade(student, curs2, 8);
+	catalog.addGrade(student, curs3, 5);
+	catalog.addGrade(student, curs4, 10);
+	std::println("{}", catalog.getAllGrades(student));
+	
+	StudentDomain studentDomain(studentRepository, catalog);
+	StudentService studentService(studentDomain);
+	std::println("{}", studentService.calculateAverageMark(1));
 
 	return 0;
 }
