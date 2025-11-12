@@ -7,14 +7,14 @@
 class StudentDomain
 {
 public:
-	StudentDomain(StudentRepository& repository,
+	StudentDomain(IStudentRepository& repository,
 		Catalog& catalog);
 
 public:
 	double calculateAverageMark(int studentID);
 
 private:
-	StudentRepository& m_repository;
+	IStudentRepository& m_repository;
 	Catalog& m_catalog;
 };
 

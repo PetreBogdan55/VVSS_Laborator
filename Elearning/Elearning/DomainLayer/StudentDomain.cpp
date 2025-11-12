@@ -1,7 +1,7 @@
 #include "StudentDomain.h"
 
 
-StudentDomain::StudentDomain(StudentRepository& repository,
+StudentDomain::StudentDomain(IStudentRepository& repository,
 	Catalog& catalog)
 	: m_repository(repository), m_catalog(catalog)
 {
