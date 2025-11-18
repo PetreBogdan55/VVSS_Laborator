@@ -63,6 +63,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <Profile>true</Profile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -100,9 +101,11 @@
   <ItemGroup>
     <ClInclude Include="MockStudentRepository.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ThreadSafeQueue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="integration_tests.cpp" />
+    <ClCompile Include="Latch.h" />
     <ClCompile Include="mocking_tests.cpp" />
     <ClCompile Include="simple_tests.cpp" />
     <ClCompile Include="pch.cpp">
@@ -111,6 +114,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="threads_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />
