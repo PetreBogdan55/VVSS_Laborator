@@ -60,6 +60,9 @@
     <ClCompile Include="ServiceLayer\StudentService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Networking\Networking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EntityLayer\User.h">
@@ -107,8 +110,15 @@
     <ClInclude Include="ServiceLayer\StudentService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Networking\Networking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\httplib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -103,11 +103,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>ServiceLayer;DomainLayer;Utils;RepositoryLayer/StudentRepositoryLayer;IntegrationLayer/Database;IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projects\VisualStudio\VVSS_Laborator\Dependencies\FireDaemonOpenSSL3\include;Networking;ServiceLayer;DomainLayer;Utils;RepositoryLayer/StudentRepositoryLayer;IntegrationLayer/Database;IntegrationLayer/Logger;IntegrationLayer/Environment;EntityLayer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Projects\VisualStudio\VVSS_Laborator\Dependencies\FireDaemonOpenSSL3\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libssl.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,6 +138,7 @@
     <ClCompile Include="IntegrationLayer\Logger\LoggerSingleton.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="EntityLayer\Student.cpp" />
+    <ClCompile Include="Networking\Networking.cpp" />
     <ClCompile Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.cpp" />
     <ClCompile Include="DomainLayer\StudentDomain.cpp" />
     <ClCompile Include="ServiceLayer\StudentService.cpp" />
@@ -152,6 +155,8 @@
     <ClInclude Include="IntegrationLayer\Logger\Logger.h" />
     <ClInclude Include="IntegrationLayer\Logger\LoggerSingleton.h" />
     <ClInclude Include="EntityLayer\Student.h" />
+    <ClInclude Include="Networking\httplib.h" />
+    <ClInclude Include="Networking\Networking.h" />
     <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\IStudentRepository.h" />
     <ClInclude Include="RepositoryLayer\StudentRepositoryLayer\StudentRepository.h" />
     <ClInclude Include="DomainLayer\StudentDomain.h" />
@@ -160,8 +165,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".env" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets" Condition="Exists('..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets'))" />
+  </Target>
 </Project>

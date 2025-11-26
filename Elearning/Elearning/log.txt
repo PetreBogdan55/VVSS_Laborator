@@ -1,8 +1,2 @@
-[INFO]    [2025-11-12 10:01:21] Attempting connection to SQL Server...
-[INFO]    [2025-11-12 10:01:21] Successfully connected to SQL Server
+[INFO]    [2025-11-26 10:42:32] Connected to the internet
 
-[INFO]    [2025-11-12 10:01:21] Added grade 6.000000 for student Vasile in course DAM.
-[INFO]    [2025-11-12 10:01:21] Added grade 8.000000 for student Vasile in course TW.
-[INFO]    [2025-11-12 10:01:21] Added grade 5.000000 for student Vasile in course PID.
-[INFO]    [2025-11-12 10:01:21] Added grade 10.000000 for student Vasile in course VVSS.
-[INFO]    [2025-11-12 10:01:21] Disconnected from database!
